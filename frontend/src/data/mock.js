@@ -34,6 +34,41 @@ export const productImages = [
     title: 'Coral Rose in Pot',
     category: 'Crochet Flowers',
     description: 'Single coral rose in rustic twine pot'
+  },
+  {
+    id: 6,
+    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/534324ww_image.png',
+    title: 'Pressed Flower Phone Case',
+    category: 'Resin Art',
+    description: 'Clear phone case with pressed magenta flowers'
+  },
+  {
+    id: 7,
+    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/vw0a0j1t_image.png',
+    title: 'Daisy Resin Necklace',
+    category: 'Resin Art',
+    description: 'Gold pendant with preserved daisy and forget-me-nots'
+  },
+  {
+    id: 8,
+    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/yivdljpv_image.png',
+    title: 'Rose Petal Keychain',
+    category: 'Resin Art',
+    description: 'Golden keychain with preserved rose petals'
+  },
+  {
+    id: 9,
+    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/tkxn1nae_image.png',
+    title: 'Preserved Rose Frame',
+    category: 'Resin Art',
+    description: 'Pearl-adorned resin frame with preserved burgundy rose'
+  },
+  {
+    id: 10,
+    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/m5reo0ix_image.png',
+    title: 'Rose Resin Keepsake',
+    category: 'Resin Art',
+    description: 'Rectangular resin piece with dried rose and gold flakes'
   }
 ];
 
