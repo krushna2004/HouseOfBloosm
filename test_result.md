@@ -101,3 +101,64 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Test the House of Blooms inquiry system backend endpoints"
+
+backend:
+  - task: "POST /api/inquiries - Create new inquiry"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "✅ PASS: Inquiry creation endpoint working correctly. Returns proper response structure with id, timestamp, status='new'. Validates required fields and rejects invalid requests with 422 status. Email notification logging confirmed in backend logs."
+
+  - task: "GET /api/inquiries - Retrieve all inquiries"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "✅ PASS: Inquiry retrieval endpoint working correctly. Returns array of inquiries sorted by timestamp (newest first). Proper response structure with all required fields."
+
+  - task: "Email notification system"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 1
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: false
+          agent: "testing"
+          comment: "❌ FAIL: Email notification logging not appearing in logs due to logging configuration issue."
+        - working: true
+          agent: "testing"
+          comment: "✅ FIXED: Moved logging configuration to top of server.py file. Email notifications now properly logged with details including inquiry ID and recipient email. Email content is prepared but SMTP is disabled for development (as intended)."
+
+metadata:
+  created_by: "testing_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "POST /api/inquiries - Create new inquiry"
+    - "GET /api/inquiries - Retrieve all inquiries"
+    - "Email notification system"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+    - agent: "testing"
+      message: "Completed comprehensive testing of House of Blooms inquiry system. Fixed critical logging configuration bug. All backend endpoints working correctly. Email notifications are properly logged (SMTP disabled for development as intended). MongoDB integration working. Data persistence and retrieval confirmed. Sorting by timestamp working correctly."
