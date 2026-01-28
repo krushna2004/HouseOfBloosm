@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { Instagram, Phone, Send, Heart } from 'lucide-react';
 import { brandInfo } from '../data/mock';
 import { toast } from 'sonner';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,16 +14,25 @@ export const Contact = () => {
     product: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Store in localStorage for demo
-    const inquiries = JSON.parse(localStorage.getItem('inquiries') || '[]');
-    inquiries.push({ ...formData, timestamp: new Date().toISOString() });
-    localStorage.setItem('inquiries', JSON.stringify(inquiries));
+    setIsSubmitting(true);
     
-    toast.success('Thank you! We\'ll reach out to you soon via WhatsApp or Instagram!');
-    setFormData({ name: '', email: '', product: '', message: '' });
+    try {
+      const response = await axios.post(`${API}/inquiries`, formData);
+      
+      if (response.data) {
+        toast.success('Thank you! We\'ll reach out to you soon via WhatsApp or Instagram! 🌸');
+        setFormData({ name: '', email: '', product: '', message: '' });
+      }
+    } catch (error) {
+      console.error('Error submitting inquiry:', error);
+      toast.error('Oops! Something went wrong. Please try WhatsApp or Instagram instead.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
