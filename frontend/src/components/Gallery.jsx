@@ -84,7 +84,7 @@ export const Gallery = () => {
             onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
             className="bg-rose-400 text-white px-8 py-3 rounded-full hover:bg-rose-500 transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2"
           >
-            Request Custom Order
+            Send us Message
           </button>
         </div>
       </div>
