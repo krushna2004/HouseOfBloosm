@@ -4,6 +4,13 @@ import { productImages } from '../data/mock';
 
 export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const categories = ['All', 'Crochet Flowers', 'Crochet Bouquets', 'Resin Art', 'Accessories'];
+
+  const filteredImages = activeFilter === 'All' 
+    ? productImages 
+    : productImages.filter(img => img.category === activeFilter);
 
   return (
     <section id="gallery" className="py-20 px-6 bg-white">
@@ -12,15 +19,32 @@ export const Gallery = () => {
           <h2 className="font-serif text-4xl md:text-5xl text-gray-800 mb-4">
             Our Creations
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
             Every piece is handcrafted with love and attention to detail.
-            Browse our collection of crochet flowers, bouquets, and accessories.
+            Browse our collection of crochet flowers, bouquets, resin art, and accessories.
           </p>
+
+          {/* Filter Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveFilter(category)}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeFilter === category
+                    ? 'bg-rose-400 text-white shadow-lg scale-105'
+                    : 'bg-gray-100 text-gray-700 hover:bg-rose-50 hover:text-rose-400'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {productImages.map((image, index) => (
+          {filteredImages.map((image, index) => (
             <div
               key={image.id}
               className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
