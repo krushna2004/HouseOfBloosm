@@ -3,13 +3,6 @@ import { Flower2, Sparkles } from 'lucide-react';
 import { brandInfo } from '../data/mock';
 
 export const Hero = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section
       id="home"
@@ -36,14 +29,8 @@ export const Hero = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
-              onClick={scrollToContact}
-              className="bg-rose-400 text-white px-8 py-3 rounded-full hover:bg-rose-500 transition-all duration-300 hover:shadow-xl hover:scale-105 text-lg"
-            >
-              Send us Message
-            </button>
-            <button
               onClick={() => document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' })}
-              className="border-2 border-sage-500 text-sage-700 px-8 py-3 rounded-full hover:bg-sage-50 transition-all duration-300 text-lg"
+              className="bg-rose-400 text-white px-8 py-3 rounded-full hover:bg-rose-500 transition-all duration-300 hover:shadow-xl hover:scale-105 text-lg"
             >
               View Gallery
             </button>
