@@ -6,7 +6,7 @@ export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const categories = ['All', 'Crochet Flowers', 'Crochet Bouquets', 'Resin Art', 'Hand-Painted Sarees', 'Accessories'];
+  const categories = ['All', 'Crochet Flowers', 'Bouquet Collection', 'Resin Art', 'Hand-Painted Sarees', 'Polaroid Keepsakes', 'Accessories'];
 
   const filteredImages = activeFilter === 'All' 
     ? productImages 
