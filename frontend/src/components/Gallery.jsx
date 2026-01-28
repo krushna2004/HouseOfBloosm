@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X } from 'lucide-react';
+import { X, Phone } from 'lucide-react';
 import { productImages } from '../data/mock';
 
 export const Gallery = () => {
