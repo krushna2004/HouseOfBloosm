@@ -99,7 +99,7 @@ export const Navbar = () => {
                 onClick={() => scrollToSection('contact')}
                 className="bg-rose-400 text-white px-6 py-2 rounded-full hover:bg-rose-500 transition-all text-center"
               >
-                Order Now
+                Send Message
               </button>
             </div>
           </div>
