@@ -39,7 +39,7 @@ export const Hero = () => {
               onClick={scrollToContact}
               className="bg-rose-400 text-white px-8 py-3 rounded-full hover:bg-rose-500 transition-all duration-300 hover:shadow-xl hover:scale-105 text-lg"
             >
-              Order Custom Piece
+              Send us Message
             </button>
             <button
               onClick={() => document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' })}
