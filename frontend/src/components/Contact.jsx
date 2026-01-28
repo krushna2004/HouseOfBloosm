@@ -187,10 +187,11 @@ export const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-rose-400 text-white px-6 py-3 rounded-lg hover:bg-rose-500 transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2 group"
+                disabled={isSubmitting}
+                className="w-full bg-rose-400 text-white px-6 py-3 rounded-lg hover:bg-rose-500 transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span>Send Message</span>
-                <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                {!isSubmitting && <Send size={18} className="group-hover:translate-x-1 transition-transform" />}
               </button>
             </form>
           </div>
