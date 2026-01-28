@@ -69,6 +69,41 @@ export const productImages = [
     title: 'Rose Resin Keepsake',
     category: 'Resin Art',
     description: 'Rectangular resin piece with dried rose and gold flakes'
+  },
+  {
+    id: 11,
+    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/if3f1685_image.png',
+    title: 'Red Tulip Saree',
+    category: 'Hand-Painted Sarees',
+    description: 'White saree with hand-painted red tulips'
+  },
+  {
+    id: 12,
+    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/mk6dqgha_image.png',
+    title: 'Sage Daisy Saree',
+    category: 'Hand-Painted Sarees',
+    description: 'Sage green saree with white daisy motifs'
+  },
+  {
+    id: 13,
+    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/gq587529_image.png',
+    title: 'Pink Lotus Saree',
+    category: 'Hand-Painted Sarees',
+    description: 'White saree with pink lotus and gold border'
+  },
+  {
+    id: 14,
+    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/d03ipobn_image.png',
+    title: 'Sheer Floral Saree',
+    category: 'Hand-Painted Sarees',
+    description: 'White sheer saree with delicate pink florals'
+  },
+  {
+    id: 15,
+    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/io6627jh_image.png',
+    title: 'Pink Petal Saree',
+    category: 'Hand-Painted Sarees',
+    description: 'Cream silk with pink flower petals and gold accents'
   }
 ];
 
