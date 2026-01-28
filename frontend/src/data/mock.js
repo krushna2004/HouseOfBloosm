@@ -11,14 +11,14 @@ export const productImages = [
     id: 2,
     url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/ew2rtedf_image.png',
     title: 'Purple & White Bouquet',
-    category: 'Crochet Bouquets',
+    category: 'Crochet Flowers',
     description: 'Charming purple and white flower bouquet in pink pot'
   },
   {
     id: 3,
     url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/sq56v7d3_image.png',
     title: 'Sunflower Bag Charm',
-    category: 'Accessories',
+    category: 'Crochet Flowers',
     description: 'Vibrant yellow sunflower bag charm'
   },
   {
@@ -108,22 +108,22 @@ export const productImages = [
   {
     id: 16,
     url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/ps8pgjpf_image.png',
-    title: 'Polaroid Memory Bouquet',
-    category: 'Polaroid Keepsakes',
+    title: 'Polaroid Memory Box',
+    category: 'Bouquet Collection',
     description: 'Black explosion box with polaroid photos, Kit Kats and red ribbon'
   },
   {
     id: 17,
     url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/ss5roh6c_image.png',
     title: 'Happy Birthday Box',
-    category: 'Polaroid Keepsakes',
+    category: 'Bouquet Collection',
     description: 'Craft box with polaroid fan and birthday bunting decoration'
   },
   {
     id: 18,
     url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/esc52atz_image.png',
     title: 'Love This Gift Box',
-    category: 'Polaroid Keepsakes',
+    category: 'Bouquet Collection',
     description: 'Explosion box with accessories, photos and love this tags'
   },
   {
@@ -132,27 +132,6 @@ export const productImages = [
     title: 'Kinder Joy Bouquet',
     category: 'Bouquet Collection',
     description: 'White rose bouquet with Kinder Joy chocolates and baby breath'
-  },
-  {
-    id: 20,
-    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/mk6dqgha_image.png',
-    title: 'Sage Green Bouquet',
-    category: 'Bouquet Collection',
-    description: 'Elegant sage colored wrapped bouquet'
-  },
-  {
-    id: 21,
-    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/ew2rtedf_image.png',
-    title: 'Purple Dreams Bouquet',
-    category: 'Bouquet Collection',
-    description: 'Purple and white crochet bouquet in pink pot'
-  },
-  {
-    id: 22,
-    url: 'https://customer-assets.emergentagent.com/job_fervent-bhabha-1/artifacts/7ebzfwl9_image.png',
-    title: 'Single Rose Pot',
-    category: 'Bouquet Collection',
-    description: 'Coral rose in rustic twine wrapped pot'
   }
 ];
 
