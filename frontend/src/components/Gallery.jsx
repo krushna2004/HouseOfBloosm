@@ -71,7 +71,7 @@ export const Gallery = () => {
           ))}
         </div>
 
-        {/* Custom Order CTA */}
+        {/* WhatsApp Order CTA */}
         <div className="mt-16 text-center bg-gradient-to-r from-pink-50 to-green-50 rounded-3xl p-12">
           <h3 className="font-serif text-3xl text-gray-800 mb-4">
             Want something special?
@@ -80,12 +80,26 @@ export const Gallery = () => {
             We create custom pieces tailored to your vision. From color choices to design details,
             every creation is uniquely yours.
           </p>
-          <button
-            onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-            className="bg-rose-400 text-white px-8 py-3 rounded-full hover:bg-rose-500 transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2"
-          >
-            Send us Message
-          </button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={`https://wa.me/919023970291?text=${encodeURIComponent('Hi! I want to order something special from House of Blooms')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 text-white px-8 py-3 rounded-full hover:bg-green-600 transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2"
+            >
+              <Phone size={20} />
+              WhatsApp Us Now
+            </a>
+            <a
+              href={`https://wa.me/919601530514?text=${encodeURIComponent('Hi! I want to order something special from House of Blooms')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 text-white px-8 py-3 rounded-full hover:bg-green-600 transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2"
+            >
+              <Phone size={20} />
+              WhatsApp (Alternative)
+            </a>
+          </div>
         </div>
       </div>
 
