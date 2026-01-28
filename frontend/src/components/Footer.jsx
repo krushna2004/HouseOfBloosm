@@ -48,12 +48,6 @@ export const Footer = () => {
               >
                 About Us
               </button>
-              <button
-                onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-                className="text-gray-600 hover:text-rose-400 transition-colors text-left"
-              >
-                Contact
-              </button>
             </div>
           </div>
 
