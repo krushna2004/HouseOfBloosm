@@ -58,7 +58,8 @@ export const Navbar = () => {
               About
             </button>
             <button
-              onClick={() => scrollToSection('contact')}\n              className="bg-rose-400 text-white px-6 py-2 rounded-full hover:bg-rose-500 transition-all duration-300 hover:shadow-lg"
+              onClick={() => scrollToSection('contact')}
+              className="bg-rose-400 text-white px-6 py-2 rounded-full hover:bg-rose-500 transition-all duration-300 hover:shadow-lg"
             >
               Send Message
             </button>
