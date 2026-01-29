@@ -151,15 +151,8 @@ export const productImages = [
     category: 'Bouquet Collection',
     description: 'White rose bouquet with Kinder Joy chocolates and baby breath',
     price: 599
-  },
-   {
-    id: 20,  // Next available number (currently 19 products)
-    url: 'https://i.ibb.co/0yBDPSN5/Whats-App-Image-2026-01-28-at-9-09-28-PM.jpg',  // Your ImgBB URL
-    title: 'Purple Lavender Bouquet',  // Product name
-    category: 'Crochet Flowers',  // Choose: 'Crochet Flowers', 'Resin Art', 'Hand-Painted Sarees', or 'Bouquet Collection'
-    description: 'Beautiful purple lavender bouquet with green stems',  // Short description
-    price: 299  // Price in Rupees (no ₹ symbol)
   }
+  
 ];
 
 export const brandInfo = {
