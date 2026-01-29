@@ -151,7 +151,7 @@ export const productImages = [
     category: 'Bouquet Collection',
     description: 'White rose bouquet with Kinder Joy chocolates and baby breath',
     price: 599
-  }
+  },
    {
     id: 20,  // Next available number (currently 19 products)
     url: 'https://i.ibb.co/0yBDPSN5/Whats-App-Image-2026-01-28-at-9-09-28-PM.jpg',  // Your ImgBB URL
