@@ -114,7 +114,7 @@ export const Gallery = () => {
           className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-4xl w-full">
+          <div className="relative max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setSelectedImage(null)}
               className="absolute -top-12 right-0 text-white hover:text-rose-300 transition-colors"
@@ -126,9 +126,39 @@ export const Gallery = () => {
               alt={selectedImage.title}
               className="w-full h-auto rounded-2xl shadow-2xl"
             />
-            <div className="mt-4 text-white text-center">
-              <h3 className="font-serif text-2xl mb-2">{selectedImage.title}</h3>
-              <p className="text-gray-300">{selectedImage.description}</p>
+            <div className="mt-4 bg-white rounded-2xl p-6 shadow-xl">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="font-serif text-3xl text-gray-800 mb-2">{selectedImage.title}</h3>
+                  <p className="text-gray-600 mb-2">{selectedImage.description}</p>
+                  <span className="inline-block bg-rose-100 text-rose-600 px-3 py-1 rounded-full text-sm">
+                    {selectedImage.category}
+                  </span>
+                </div>
+                <div className="text-right">
+                  <div className="text-3xl font-bold text-rose-500">₹{selectedImage.price}</div>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3 mt-6">
+                <a
+                  href={`https://wa.me/919023970291?text=${encodeURIComponent(`Hi! I want to order ${selectedImage.title} (₹${selectedImage.price}) from House of Blooms`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center gap-2"
+                >
+                  <Phone size={20} />
+                  Order on WhatsApp
+                </a>
+                <a
+                  href={`https://wa.me/919601530514?text=${encodeURIComponent(`Hi! I want to order ${selectedImage.title} (₹${selectedImage.price}) from House of Blooms`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center gap-2"
+                >
+                  <Phone size={20} />
+                  Alternative WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </div>
